@@ -7,7 +7,12 @@ var emojiDictioary = {
   "💔": "Broken",
   "🍫": "Chococalate",
   "🏏": "Cricket",
-  "☕": "Coffee"
+  "☕": "Coffee",
+  "⚽️":"football" ,
+  "😡":"angry" ,
+  "😇": "thinking",
+  "😱":"shocking"
+  
 };
 var EmojiWeknow = Object.keys(emojiDictioary);
 export default function App() {
