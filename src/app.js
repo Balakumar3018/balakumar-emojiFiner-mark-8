@@ -1,35 +1,33 @@
 import { useState } from "react";
 import "./styles.css";
 
-var emojiDictioary = {
+let emojiDictioary = {
   "🏃": "Running",
   "🔥": "Fire",
   "💔": "Broken",
   "🍫": "Chococalate",
   "🏏": "Cricket",
   "☕": "Coffee",
-  "⚽️":"football" ,
-  "😡":"angry" ,
+  "⚽️": "football",
+  "😡": "angry",
   "😇": "thinking",
-  "😱":"shocking"
-  
+  "😱": "shocking"
 };
-var EmojiWeknow = Object.keys(emojiDictioary);
+let EmojiWeknow = Object.keys(emojiDictioary);
 export default function App() {
   const [Meaning, SetMeaning] = useState("");
-
-  function EmojiFinderFun(event) {
-    var Emoji = event.target.value;
-    var Meaning = emojiDictioary[Emoji];
+  const EmojiFinderFun = (event) => {
+    let Emoji = event.target.value;
+    let Meaning = emojiDictioary[Emoji];
     if (Meaning === undefined) {
       Meaning = "We dont have this on our database";
     }
     SetMeaning(Meaning);
-  }
-  function emojiClickHandler(Emoji) {
-    var Meaning = emojiDictioary[Emoji];
+  };
+  const emojiClickHandler = (Emoji) => {
+    let Meaning = emojiDictioary[Emoji];
     SetMeaning(Meaning);
-  }
+  };
   return (
     <div className="App">
       <h1>Emoji Finder</h1>
